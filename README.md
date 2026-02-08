@@ -516,3 +516,22 @@ MVP is done when all statements are true:
 - Prefer deleting complexity over adding abstraction too early.
 - Ship visible UX early, harden in parallel, then expand providers.
 - Be explicit about unsupported provider/account combinations.
+
+## Current status
+
+Phase 1 (Ticket T0.1) is in progress with an MV3 baseline implementation:
+
+- popup + background + content script scaffolding
+- one-shot popup -> background -> content message roundtrip
+- `activeTab`-driven extraction placeholder payload
+- build script that emits a loadable `dist/` extension package
+
+### Local development
+
+```bash
+npm install
+npm run typecheck
+npm run build
+```
+
+Load `dist/` as an unpacked extension in Edge Developer Mode.
